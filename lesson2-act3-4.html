@@ -3,190 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الأنشطة (3 و 4): المواد النقية والمخاليط - العلوم والحياة</title>
+    <title>الأنشطة (3 و 4): المواد النقية والمخاليط</title>
     <style>
         * { box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            min-height: 100vh;
+            margin: 0; padding: 20px; color: #333; min-height: 100vh;
         }
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 14px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            overflow: hidden;
-            border: 2px solid #1e3d59;
+            max-width: 900px; margin: 0 auto; background: #ffffff;
+            border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            overflow: hidden; border: 2px solid #1e3d59;
         }
-        .header {
-            background: #1e3d59;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 5px solid #ce1126;
+        .nav-bar {
+            background: #11293d; padding: 12px 20px;
+            display: flex; justify-content: space-between; align-items: center;
         }
+        .btn-back {
+            background: #f2c94c; color: #11293d; text-decoration: none;
+            padding: 8px 16px; border-radius: 6px; font-weight: bold;
+            font-size: 14px; transition: 0.3s; display: inline-flex; align-items: center; gap: 6px;
+        }
+        .btn-back:hover { background: #ffffff; }
+        .header { background: #1e3d59; color: white; padding: 20px; text-align: center; border-bottom: 5px solid #ce1126; }
         .header h1 { font-size: 22px; margin: 0 0 6px 0; color: #f2c94c; }
         .header h2 { font-size: 17px; margin: 0 0 6px 0; color: #ffffff; }
-        .header p { margin: 3px 0; font-size: 14px; }
-
-        .goal-banner {
-            background: #e8f5e9;
-            border-right: 6px solid #007a3d;
-            padding: 15px 20px;
-            margin: 20px;
-            border-radius: 8px;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        .activity-card {
-            background: #f8fafc;
-            border: 2px solid #cbd5e1;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-        }
+        .goal-banner { background: #e8f5e9; border-right: 6px solid #007a3d; padding: 15px 20px; margin: 20px; border-radius: 8px; font-size: 15px; line-height: 1.7; }
+        .activity-card { background: #f8fafc; border: 2px solid #cbd5e1; padding: 20px; margin: 20px; border-radius: 10px; }
         .activity-card h3 { color: #1e3d59; margin-top: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
-
-        .lab-visual-box {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background: #fff;
-            border: 2px dashed #94a3b8;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 15px 0;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .lab-item {
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;
-            color: #1e3d59;
-        }
-        .lab-graphic {
-            width: 130px;
-            height: 100px;
-            background: #f1f5f9;
-            border: 2px solid #334155;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            position: relative;
-            overflow: hidden;
-            margin: 0 auto 8px auto;
-        }
-        
-        .btn-action {
-            background: #007a3d;
-            color: white;
-            border: none;
-            padding: 10px 22px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: bold;
-            transition: 0.2s;
-            display: block;
-            margin: 10px auto;
-        }
+        .lab-visual-box { display: flex; justify-content: space-around; align-items: center; background: #fff; border: 2px dashed #94a3b8; border-radius: 8px; padding: 20px; margin: 15px 0; flex-wrap: wrap; gap: 15px; }
+        .lab-item { text-align: center; font-size: 14px; font-weight: bold; color: #1e3d59; }
+        .lab-graphic { width: 130px; height: 100px; background: #f1f5f9; border: 2px solid #334155; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 8px auto; }
+        .btn-action { background: #007a3d; color: white; border: none; padding: 10px 22px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: bold; display: block; margin: 10px auto; transition: 0.2s; }
         .btn-action:hover { background: #005c2e; }
-
-        .result-box {
-            margin-top: 15px;
-            padding: 15px;
-            background: #f0fdf4;
-            border: 1px solid #16a34a;
-            border-radius: 6px;
-            font-size: 15px;
-            line-height: 1.7;
-            color: #166534;
-            display: none;
-            text-align: right;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #1e3d59;
-            color: white;
-            font-size: 14px;
-        }
+        .result-box { margin-top: 15px; padding: 15px; background: #f0fdf4; border: 1px solid #16a34a; border-radius: 6px; font-size: 15px; line-height: 1.7; color: #166534; display: none; text-align: right; }
+        .bottom-nav { text-align: center; padding: 15px; background: #f1f5f9; border-top: 1px solid #cbd5e1; }
+        footer { text-align: center; padding: 15px; background: #1e3d59; color: white; font-size: 14px; }
     </style>
 </head>
 <body>
-
     <div class="container">
+        <div class="nav-bar">
+            <a href="index.html" class="btn-back">🏠 العودة للفهرس الرئيسي</a>
+            <span style="color: white; font-size: 14px;">الأنشطة (3 و 4)</span>
+        </div>
         <div class="header">
             <h1>الوحدة الثانية: خصائص المادة</h1>
             <h2>الدرس الأول: أنواع المادة وخصائصها (الأنشطة 3 و 4)</h2>
-            <p>مدرسة ذكور طمون الأساسية العليا | الصف الخامس الأساسي | العلوم والحياة</p>
-            <p>معلم المادة: أ. أمين عبدالرازق</p>
         </div>
-
         <div class="goal-banner">
-            <strong>🎯 هدف التعلم:</strong> استكشاف الفرق بين المواد التي تتكون دقائقها من نوع واحد (المادة النقية) والمواد الناتجة عن اختلاط مادتين أو أكثر (المخلوط).
+            <strong>🎯 هدف التعلم:</strong> استكشاف الفرق بين المادة النقية والمخلوط.
         </div>
-
-        <!-- نشاط 3 -->
         <div class="activity-card">
             <h3>نشاط (3): ما المادة النقية؟ (ص 28)</h3>
-            <p><strong>خطوات التجربة:</strong> فحص عينة من السكر أو الملح بالعدسة المكبرة لملاحظة وحدات التركيب.</p>
-            <div class="lab-visual-box">
-                <div class="lab-item">
-                    <div class="lab-graphic">💎🔍</div>
-                    عينة السكر / الملح
-                </div>
-            </div>
+            <p><strong>خطوات التجربة:</strong> فحص عينة السكر بالعدسة المكبرة.</p>
+            <div class="lab-visual-box"><div class="lab-item"><div class="lab-graphic">💎🔍</div>عينة السكر</div></div>
             <button class="btn-action" onclick="runActivity3()">🔍 تنفيذ نشاط (3) واستنتاج المفهوم</button>
             <div class="result-box" id="res-3"></div>
         </div>
-
-        <!-- نشاط 4 -->
         <div class="activity-card">
             <h3>نشاط (4): تكوين المخلوط (ص 29)</h3>
-            <p><strong>خطوات التجربة:</strong> خلط برادة الحديد مع حبوب الأرز أو الرمل، ثم تقريب المغناطيس.</p>
-            <div class="lab-visual-box">
-                <div class="lab-item">
-                    <div class="lab-graphic">🥣🧲</div>
-                    خليط الحديد والأرز
-                </div>
-            </div>
+            <p><strong>خطوات التجربة:</strong> خلط برادة الحديد مع حبوب الأرز وتجربة الفصل بالمغناطيس.</p>
+            <div class="lab-visual-box"><div class="lab-item"><div class="lab-graphic">🥣🧲</div>حديد وأرز</div></div>
             <button class="btn-action" onclick="runActivity4()">🧲 تنفيذ نشاط (4) واستنتاج المفهوم</button>
             <div class="result-box" id="res-4"></div>
         </div>
-
-        <footer>
-            تطبيق تفاعلي من منهاج العلوم والحياة - فلسطين
-        </footer>
+        <div class="bottom-nav">
+            <a href="index.html" class="btn-back">🏠 العودة للفهرس الرئيسي للأنشطة</a>
+        </div>
+        <footer>إعداد المعلم: أ. أمين عبدالرازق | مدرسة ذكور طمون الأساسية العليا</footer>
     </div>
-
     <script>
         function runActivity3() {
             const box = document.getElementById('res-3');
             box.style.display = 'block';
-            box.innerHTML = "📌 <b>الملاحظة والتسجيل:</b><br>" +
-                            "عند فحص حبيبات السكر بالعدسة المكبرة وجدنا أن جميع الدقائق متشابهة تماماً في الشكل والخصائص.<br><br>" +
-                            "💡 <b>الاستنتاج العلمي:</b><br>" +
-                            "<strong>نستنتج أن المادة النقية: هي المادة التي تتكون دقائقها من النوع نفسه والتراكيب نفسها.</strong>";
+            box.innerHTML = "📌 <b>الملاحظة والتسجيل:</b> جميع الدقائق متشابهة تماماً.<br><br>💡 <b>الاستنتاج العلمي:</b> <strong>المادة النقية هي المادة التي تتكون دقائقها من النوع نفسه.</strong>";
         }
-
         function runActivity4() {
             const box = document.getElementById('res-4');
             box.style.display = 'block';
-            box.innerHTML = "📌 <b>الملاحظة والتسجيل:</b><br>" +
-                            "عند خلط برادة الحديد مع الأرز احتفظت كل مادة بخصائصها، وعند تقريب المغناطيس انجذبت برادة الحديد وحدها وتم فصلها دون تفاعل كيميائي.<br><br>" +
-                            "💡 <b>الاستنتاج العلمي:</b><br>" +
-                            "<strong>نستنتج أن المخلوط (المادة غير النقية): هو ناتج اختلاط مادتين أو أكثر دون حدوث تفاعل كيميائي، مع احتفاظ كل مادة بخصائصها الأصلية.</strong>";
+            box.innerHTML = "📌 <b>الملاحظة والتسجيل:</b> احتفظت كل مادة بخصائصها وانجذب الحديد للمغناطيس.<br><br>💡 <b>الاستنتاج العلمي:</b> <strong>المخلوط هو ناتج اختلاط مادتين أو أكثر دون تفاعل كيميائي.</strong>";
         }
     </script>
 </body>
