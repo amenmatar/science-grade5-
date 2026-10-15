@@ -23,6 +23,34 @@
             overflow: hidden;
             border: 2px solid #1e3d59;
         }
+        
+        /* شريط العودة للموقع الرئيسي */
+        .top-bar {
+            background: #11293d;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .main-site-link {
+            color: #f2c94c;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            background: rgba(255,255,255,0.1);
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .main-site-link:hover {
+            background: #f2c94c;
+            color: #11293d;
+        }
+
         .header {
             background: #1e3d59;
             color: white;
@@ -97,6 +125,14 @@
 <body>
 
     <div class="container">
+        <!-- شريط الربط العلوي بـ ameenmatar.github.io -->
+        <div class="top-bar">
+            <span style="color: #ffffff; font-size: 13px;">🌐 المنصة التفاعلية للعلوم</span>
+            <a href="https://ameenmatar.github.io/" target="_blank" class="main-site-link">
+                🏠 زيارة موقع المعلم الرئيسي (ameenmatar.github.io)
+            </a>
+        </div>
+
         <div class="header">
             <h1>موقع المعلم الرقمي - العلوم والحياة</h1>
             <h2>الوحدة الثانية: خصائص المادة | الدرس الأول: أنواع المادة وخصائصها</h2>
