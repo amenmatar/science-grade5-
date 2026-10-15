@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأنشطة (11 و 12): المركبات والسبائك - العلوم والحياة</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            border: 2px solid #1e3d59;
+        }
+        .header {
+            background: #1e3d59;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ce1126;
+        }
+        .header h1 { font-size: 22px; margin: 0 0 6px 0; color: #f2c94c; }
+        .header h2 { font-size: 17px; margin: 0 0 6px 0; color: #ffffff; }
+        .header p { margin: 3px 0; font-size: 14px; }
+
+        .goal-banner {
+            background: #e8f5e9;
+            border-right: 6px solid #007a3d;
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .activity-card {
+            background: #f8fafc;
+            border: 2px solid #cbd5e1;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .activity-card h3 { color: #1e3d59; margin-top: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+
+        .lab-visual-box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #fff;
+            border: 2px dashed #94a3b8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .lab-item {
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #1e3d59;
+        }
+        .lab-graphic {
+            width: 130px;
+            height: 100px;
+            background: #f1f5f9;
+            border: 2px solid #334155;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto 8px auto;
+        }
+        
+        .btn-action {
+            background: #007a3d;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.2s;
+            display: block;
+            margin: 10px auto;
+        }
+        .btn-action:hover { background: #005c2e; }
+
+        .result-box {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f0fdf4;
+            border: 1px solid #16a34a;
+            border-radius: 6px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #166534;
+            display: none;
+            text-align: right;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1e3d59;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>الوحدة الثانية: خصائص المادة</h1>
+            <h2>الدرس الأول: أنواع المادة وخصائصها (الأنشطة 11 و 12)</h2>
+            <p>مدرسة ذكور طمون الأساسية العليا | الصف الخامس الأساسي | العلوم والحياة</p>
+            <p>معلم المادة: أ. أمين عبدالرازق</p>
+        </div>
+
+        <div class="goal-banner">
+            <strong>🎯 هدف التعلم:</strong> استكشاف مفهوم المركب الناتج عن اتحاد عناصر بنسبة ثابتة وتغير خصائصه عن مكوناته الأصلية، والتعرف على السبائك المعدنية.
+        </div>
+
+        <!-- نشاط 11 -->
+        <div class="activity-card">
+            <h3>نشاط (11): المركبات (ص 37)</h3>
+            <p><strong>خطوات التجربة:</strong> دراسة اتحاد عنصرين (مثل الصوديوم السام والكلور الخانق لتكوين مركب كلوريد الصوديوم "ملح الطعام").</p>
+            <div class="lab-visual-box">
+                <div class="lab-item">
+                    <div class="lab-graphic">⚛️🔗⚛️</div>
+                    اتحاد العناصر (المركب)
+                </div>
+            </div>
+            <button class="btn-action" onclick="runActivity11()">🧪 تنفيذ نشاط (11) واستنتاج المفهوم</button>
+            <div class="result-box" id="res-11"></div>
+        </div>
+
+        <!-- نشاط 12 -->
+        <div class="activity-card">
+            <h3>نشاط (12): السبائك المعدنية (ص 38)</h3>
+            <p><strong>خطوات التجربة:</strong> التعرف على مزج الفلزات ببعضها أو بمواد أخرى لتحسين خصائصها (مثل سبيكة الفولاذ والبرونز).</p>
+            <div class="lab-visual-box">
+                <div class="lab-item">
+                    <div class="lab-graphic">🛠️✨</div>
+                    السبائك المعدنية
+                </div>
+            </div>
+            <button class="btn-action" onclick="runActivity12()">⚙️ تنفيذ نشاط (12) واستنتاج المفهوم</button>
+            <div class="result-box" id="res-12"></div>
+        </div>
+
+        <footer>
+            تطبيق تفاعلي من منهاج العلوم والحياة - فلسطين
+        </footer>
+    </div>
+
+    <script>
+        function runActivity11() {
+            const box = document.getElementById('res-11');
+            box.style.display = 'block';
+            box.innerHTML = "📌 <b>الملاحظة والتسجيل:</b><br>" +
+                            "عند اتحاد عنصر الصوديوم مع عنصر الكلور يحدث تفاعل كيميائي ينتج عنه مادة جديدة كلياً (ملح الطعام) تختلف في خصائصها عن المكونات الأصلية.<br><br>" +
+                            "💡 <b>الاستنتاج العلمي:</b><br>" +
+                            "<strong>نستنتج أن المركب: هو مادة ناتجة عن اتحاد عنصرين أو أكثر اتحاداً كيميائياً بنسب ثابتة، وتختلف خصائصه عن خصائص العناصر المكونة له.</strong>";
+        }
+
+        function runActivity12() {
+            const box = document.getElementById('res-12');
+            box.style.display = 'block';
+            box.innerHTML = "📌 <b>الملاحظة والتسجيل:</b><br>" +
+                            "صهر الفلزات وخلطها معاً يمنحها قوة وصلابة ومقاومة للصدأ أكبر من الفلز النقي وحده (مثل سبيكة الفولاذ المصنوعة من الحديد والكربون).<br><br>" +
+                            "💡 <b>الاستنتاج العلمي:</b><br>" +
+                            "<strong>نستنتج أن السبيكة: هي مخلوط صلب يتكون من فلز مع فلز آخر أو مواد أخرى بهدف تحسين خصائصه الفيزيائية كالقوة والصلابة.</strong>";
+        }
+    </script>
+</body>
+</html>

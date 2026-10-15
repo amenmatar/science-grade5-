@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأنشطة (9 و 10): العناصر - العلوم والحياة</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            border: 2px solid #1e3d59;
+        }
+        .header {
+            background: #1e3d59;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ce1126;
+        }
+        .header h1 { font-size: 22px; margin: 0 0 6px 0; color: #f2c94c; }
+        .header h2 { font-size: 17px; margin: 0 0 6px 0; color: #ffffff; }
+        .header p { margin: 3px 0; font-size: 14px; }
+
+        .goal-banner {
+            background: #e8f5e9;
+            border-right: 6px solid #007a3d;
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .activity-card {
+            background: #f8fafc;
+            border: 2px solid #cbd5e1;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .activity-card h3 { color: #1e3d59; margin-top: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+
+        .lab-visual-box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #fff;
+            border: 2px dashed #94a3b8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .lab-item {
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #1e3d59;
+        }
+        .lab-graphic {
+            width: 130px;
+            height: 100px;
+            background: #f1f5f9;
+            border: 2px solid #334155;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto 8px auto;
+        }
+        
+        .btn-action {
+            background: #007a3d;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.2s;
+            display: block;
+            margin: 10px auto;
+        }
+        .btn-action:hover { background: #005c2e; }
+
+        .result-box {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f0fdf4;
+            border: 1px solid #16a34a;
+            border-radius: 6px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #166534;
+            display: none;
+            text-align: right;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1e3d59;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>الوحدة الثانية: خصائص المادة</h1>
+            <h2>الدرس الأول: أنواع المادة وخصائصها (الأنشطة 9 و 10)</h2>
+            <p>مدرسة ذكور طمون الأساسية العليا | الصف الخامس الأساسي | العلوم والحياة</p>
+            <p>معلم المادة: أ. أمين عبدالرازق</p>
+        </div>
+
+        <div class="goal-banner">
+            <strong>🎯 هدف التعلم:</strong> الاستكشاف المباشر لمفهوم العنصر كمادة نقية بسيطة لا يمكن تفكيكها إلى مواد أبسط منها بالطرق الكيميائية العادية.
+        </div>
+
+        <!-- نشاط 9 -->
+        <div class="activity-card">
+            <h3>نشاط (9): مفهوم العنصر (ص 34 - 35)</h3>
+            <p><strong>خطوات التجربة:</strong> فحص عينات نصر نقية كالألمنيوم، النحاس، والحديد ومحاولة تفكيكها إلى مواد أبسط.</p>
+            <div class="lab-visual-box">
+                <div class="lab-item">
+                    <div class="lab-graphic">🪙🔗</div>
+                    عناصر نقية (نحاس، حديد)
+                </div>
+            </div>
+            <button class="btn-action" onclick="runActivity9()">🔍 تنفيذ نشاط (9) واستنتاج المفهوم</button>
+            <div class="result-box" id="res-9"></div>
+        </div>
+
+        <!-- نشاط 10 -->
+        <div class="activity-card">
+            <h3>نشاط (10): رموز العناصر (ص 35 - 36)</h3>
+            <p><strong>خطوات التجربة:</strong> التعرف على الرموز الكيميائية المشتقة من الأسماء اللاتينية للعناصر لسهولة التعامل والتعبير عنها.</p>
+            <div class="lab-visual-box">
+                <div class="lab-item">
+                    <div class="lab-graphic">🧪⚛️</div>
+                    الرموز الكيميائية (Fe, Cu, Al)
+                </div>
+            </div>
+            <button class="btn-action" onclick="runActivity10()">⚛️ تنفيذ نشاط (10) واستنتاج المفهوم</button>
+            <div class="result-box" id="res-10"></div>
+        </div>
+
+        <footer>
+            تطبيق تفاعلي من منهاج العلوم والحياة - فلسطين
+        </footer>
+    </div>
+
+    <script>
+        function runActivity9() {
+            const box = document.getElementById('res-9');
+            box.style.display = 'block';
+            box.innerHTML = "📌 <b>الملاحظة والتسجيل:</b><br>" +
+                            "تتكون صفحة النحاس أو مسمار الحديد من نوع واحد فقط من الذرات، ولا يمكن بالطرق الفيزيائية أو الكيميائية البسيطة تحليلها إلى مواد أقدم منها.<br><br>" +
+                            "💡 <b>الاستنتاج العلمي:</b><br>" +
+                            "<strong>نستنتج أن العنصر: هو مادة نقية بسيطة التركيب لا يمكن تحليلها إلى مواد أبسط منها بالطرق الكيميائية العادية.</strong>";
+        }
+
+        function runActivity10() {
+            const box = document.getElementById('res-10');
+            box.style.display = 'block';
+            box.innerHTML = "📌 <b>الملاحظة والتسجيل:</b><br>" +
+                            "اتفق العلماء على استخدام حرف أو حرفين تعبيراً عن اسم العنصر باللغة اللاتينية أو الإنجليزية لتسهيل التواصل العلمي عالمياً.<br><br>" +
+                            "💡 <b>الاستنتاج العلمي:</b><br>" +
+                            "<strong>نستنتج أن رمز العنصر: هو اختصار يمثل ذرة واحدة من العنصر، ويُكتب بحرف كبير (Capital Letter)، وإذا تكون من حرفين يكون الحرف الثاني صغيراً (Small Letter).</strong>";
+        }
+    </script>
+</body>
+</html>
