@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوابة العلوم والحياة - الوحدة الثانية: خصائص المادة</title>
+    <title>منصة العلوم والحياة ... تطبيق تفاعلي</title>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -24,51 +24,91 @@
             border: 2px solid #1e3d59;
         }
         
-        /* شريط العودة للموقع الرئيسي */
-        .top-bar {
-            background: #11293d;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .main-site-link {
-            color: #f2c94c;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-            background: rgba(255,255,255,0.1);
-            padding: 6px 14px;
-            border-radius: 6px;
-            transition: 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .main-site-link:hover {
-            background: #f2c94c;
-            color: #11293d;
-        }
-
         .header {
             background: #1e3d59;
             color: white;
-            padding: 25px;
+            padding: 25px 20px;
             text-align: center;
             border-bottom: 5px solid #ce1126;
         }
-        .header h1 { font-size: 24px; margin: 0 0 8px 0; color: #f2c94c; }
-        .header h2 { font-size: 18px; margin: 0 0 8px 0; color: #ffffff; }
-        .header p { margin: 4px 0; font-size: 15px; }
+
+        .header h1 {
+            font-size: 26px;
+            margin: 0 0 15px 0;
+            color: #f2c94c;
+        }
+
+        /* تنسيق الأسطر المزدوجة (يمين ويسار) */
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+        .header-row .right { font-weight: bold; color: #ffffff; }
+        .header-row .left { color: #e2e8f0; }
+
+        .whatsapp-banner {
+            background: #f0fdf4;
+            border: 2px solid #25d366;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .whatsapp-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .whatsapp-info img.qr {
+            width: 75px;
+            height: 75px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            background: #fff;
+            padding: 3px;
+        }
+        .whatsapp-text h3 {
+            margin: 0 0 4px 0;
+            color: #075e54;
+            font-size: 16px;
+        }
+        .whatsapp-text p {
+            margin: 0;
+            font-size: 13px;
+            color: #475569;
+        }
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-whatsapp:hover {
+            background: #128c7e;
+        }
 
         .welcome-banner {
             background: #e8f5e9;
             border-right: 6px solid #007a3d;
             padding: 15px 20px;
-            margin: 20px;
+            margin: 0 20px 20px 20px;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.6;
         }
 
@@ -115,29 +155,67 @@
 
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 18px;
             background: #1e3d59;
             color: white;
-            font-size: 14px;
+            font-size: 15px;
+            border-top: 3px solid #ce1126;
+        }
+        footer .teacher-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #f2c94c;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .header-row {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+            .whatsapp-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .whatsapp-info {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- شريط الربط العلوي بـ ameenmatar.github.io -->
-        <div class="top-bar">
-            <span style="color: #ffffff; font-size: 13px;">🌐 المنصة التفاعلية للعلوم</span>
-            <a href="https://ameenmatar.github.io/" target="_blank" class="main-site-link">
-                🏠 زيارة موقع المعلم الرئيسي (ameenmatar.github.io)
-            </a>
+        <div class="header">
+            <!-- العنوان الرئيسي -->
+            <h1>منصة العلوم والحياة ... تطبيق تفاعلي</h1>
+
+            <!-- السطر الأول: المدرسة والصف -->
+            <div class="header-row">
+                <span class="right">مدرسة ذكور طمون الأساسية العليا</span>
+                <span class="left">الصف: الخامس الأساسي</span>
+            </div>
+
+            <!-- السطر الثاني: الوحدة والدرس -->
+            <div class="header-row">
+                <span class="right">الوحدة الثانية: خصائص المادة</span>
+                <span class="left">الدرس الأول: أنواع المادة وخصائصها</span>
+            </div>
         </div>
 
-        <div class="header">
-            <h1>موقع المعلم الرقمي - العلوم والحياة</h1>
-            <h2>الوحدة الثانية: خصائص المادة | الدرس الأول: أنواع المادة وخصائصها</h2>
-            <p>مدرسة ذكور طمون الأساسية العليا | الصف الخامس الأساسي</p>
-            <p>إعداد المعلم: أ. أمين عبدالرازق</p>
+        <!-- باركود وزر قناة الواتساب -->
+        <div class="whatsapp-banner">
+            <div class="whatsapp-info">
+                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://whatsapp.com/channel/0029Vb9Rgz8Bfxo6P7KhQr3l" alt="WhatsApp QR Code">
+                <div class="whatsapp-text">
+                    <h3>💬 قناة العلوم والحياة على الواتساب</h3>
+                    <p>امسح الباركود بالكاميرا أو اضغط الزر لمتابعة الشروحات والأنشطة.</p>
+                </div>
+            </div>
+            <a href="https://whatsapp.com/channel/0029Vb9Rgz8Bfxo6P7KhQr3l" target="_blank" class="btn-whatsapp">
+                الانضمام للقناة ➔
+            </a>
         </div>
 
         <div class="welcome-banner">
@@ -201,7 +279,8 @@
         </div>
 
         <footer>
-            جميع الحقوق محفوظة © 2026 - مدرسة ذكور طمون الأساسية العليا
+            <div class="teacher-name">إعداد المعلم: أ. أمين عبدالرازق</div>
+            <div>جميع الحقوق محفوظة © 2026 - مدرسة ذكور طمون الأساسية العليا</div>
         </footer>
     </div>
 
